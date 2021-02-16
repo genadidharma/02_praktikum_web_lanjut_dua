@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PageController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AboutController;
+use App\Http\Controllers\ArticleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,10 +17,10 @@ use App\Http\Controllers\PageController;
 */
 
 // Prak 2
-Route::get('/', [PageController::class, 'index']);
+Route::get('/', [HomeController::class, 'index']);
 
 // Prak 2
-Route::get('/about', [PageController::class, 'about']);
+Route::get('/about', [AboutController::class, 'about']);
 
 // Prak 2
-Route::get('/articles/{id}', [PageController::class, 'articles']);
+Route::get('/articles/{id}', [ArticleController::class, 'articles']);
